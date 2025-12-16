@@ -5,54 +5,167 @@
   <title>Wonka Kids – Privacy Policy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.6;
-      color: #111827;
+    :root {
+      --primary-color: #8B4513; /* Chocolate brown for Wonka theme */
+      --secondary-color: #D2691E; /* Golden brown */
+      --accent-color: #FFD700; /* Gold for highlights */
+      --text-color: #333;
+      --bg-color: #FFF8DC; /* Light cream background */
+      --border-color: #DEB887; /* Burlywood for subtle borders */
     }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 12px;
+    body {
+      font-family: 'Georgia', serif; /* More elegant, readable font */
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.7;
+      color: var(--text-color);
+      background: linear-gradient(to bottom, #FFF8DC, #F5F5DC); /* Subtle gradient */
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: var(--accent-color);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: var(--primary-color);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      font-weight: bold;
+    }
+    .last-updated {
+      font-style: italic;
+      color: var(--secondary-color);
+      margin-top: 10px;
+    }
+    .welcome {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-left: 5px solid var(--primary-color);
+      border-radius: 5px;
     }
     h2 {
-      margin-top: 24px;
-      font-size: 20px;
+      margin-top: 35px;
+      font-size: 24px;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 10px;
+      position: relative;
     }
-    a { text-decoration: none; color: #2563eb; }
+    h2::before {
+      content: "🍫"; /* Fun Wonka-themed icon */
+      margin-right: 10px;
+      font-size: 28px;
+    }
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
     ul {
-      margin: 8px 0;
-      padding-left: 20px;
+      margin: 12px 0;
+      padding-left: 25px;
     }
     li {
-      margin-bottom: 4px;
+      margin-bottom: 8px;
+      position: relative;
     }
     .bullet-list {
-      list-style-type: disc;
-      padding-left: 20px;
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .bullet-list li::before {
+      content: "✨";
+      position: absolute;
+      left: -25px;
+      color: var(--accent-color);
     }
     .sub-bullet-list {
-      list-style-type: circle;
-      padding-left: 40px;
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .sub-bullet-list li::before {
+      content: "⭐";
+      position: absolute;
+      left: -40px;
+      color: var(--secondary-color);
+    }
+    strong {
+      color: var(--primary-color);
+    }
+    a {
+      text-decoration: none;
+      color: var(--accent-color);
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+    .contact-section {
+      background: rgba(255, 248, 220, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      border: 1px solid var(--border-color);
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    footer a {
+      color: var(--accent-color);
+    }
+    .thank-you {
+      text-align: center;
+      font-style: italic;
+      color: var(--secondary-color);
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+      border: 1px dashed var(--border-color);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      header h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>PRIVACY POLICY</h1>
-  <p>
-    Last Updated: December 2025
-  </p>
-  <p>
+  <header>
+    <h1>Wonka Kids</h1>
+    <p class="last-updated">Privacy Policy – Last Updated: December 2025</p>
+  </header>
+
+  <p class="welcome">
     Welcome to Wonka Kids! We are committed to protecting your privacy and the privacy of your children. This Privacy Policy explains how we collect, use, and safeguard information when you use our educational app.
   </p>
-  
+
   <h2>1. INTRODUCTION</h2>
   <p>
     Wonka Kids is an educational memory game designed for children ages 3-8. We understand the importance of protecting children's privacy, and we are committed to complying with applicable privacy laws, including the Children's Online Privacy Protection Act (COPPA).
   </p>
-  
+
   <h2>2. INFORMATION WE COLLECT</h2>
   <p>
     We collect minimal information necessary to provide and improve our app experience:
@@ -71,7 +184,7 @@
     <li><strong>Child's Name:</strong> You may optionally enter a child's name for personalization. This is stored locally on your device only.</li>
     <li><strong>Device Information:</strong> We may collect basic device information (device type, iOS version) for app functionality and troubleshooting.</li>
   </ul>
-  
+
   <h2>3. HOW WE USE INFORMATION</h2>
   <p>
     We use the information we collect solely to:
@@ -93,7 +206,7 @@
     <li>Collect contact information</li>
     <li>Use information for marketing purposes</li>
   </ul>
-  
+
   <h2>4. DATA STORAGE</h2>
   <p>
     All game data is stored locally on your device using Apple's UserDefaults system. This means:
@@ -104,7 +217,7 @@
     <li>If you delete the app, all data is removed</li>
     <li>You can reset all data at any time through Settings</li>
   </ul>
-  
+
   <h2>5. CHILDREN'S PRIVACY (COPPA COMPLIANCE)</h2>
   <p>
     Wonka Kids is designed for children and complies with COPPA:
@@ -116,7 +229,7 @@
     <li>We do not enable social sharing features</li>
     <li>All data remains on the device and is not transmitted to external servers</li>
   </ul>
-  
+
   <h2>6. THIRD-PARTY SERVICES</h2>
   <p>
     We use the following third-party services:
@@ -125,7 +238,7 @@
     <li><strong>Firebase Core:</strong> We use Firebase for basic app functionality. Firebase Analytics and Crashlytics are configured but currently disabled. No personal data is transmitted to Firebase.</li>
     <li><strong>Apple Services:</strong> The app uses standard Apple services (UserDefaults, iCloud if enabled) which are subject to Apple's Privacy Policy.</li>
   </ul>
-  
+
   <h2>7. DATA SECURITY</h2>
   <p>
     We implement appropriate technical measures to protect your data:
@@ -136,7 +249,7 @@
     <li>We do not transmit data over the internet</li>
     <li>Regular iOS security updates protect your device</li>
   </ul>
-  
+
   <h2>8. YOUR RIGHTS</h2>
   <p>
     You have the right to:
@@ -146,7 +259,7 @@
     <li><strong>Delete your data:</strong> Use the "Reset All Data" option in Settings to delete all information</li>
     <li><strong>Opt-out:</strong> You can stop using the app at any time and delete it from your device</li>
   </ul>
-  
+
   <h2>9. PARENTAL CONTROLS</h2>
   <p>
     Parents and guardians can:
@@ -157,29 +270,32 @@
     <li>Delete the app to remove all data</li>
     <li>Control device-level privacy settings through iOS Settings</li>
   </ul>
-  
+
   <h2>10. CHANGES TO THIS PRIVACY POLICY</h2>
   <p>
     We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date. Your continued use of the app after changes constitutes acceptance of the updated policy.
   </p>
-  
+
   <h2>11. CONTACT US</h2>
-  <p>
-    If you have questions about this Privacy Policy or our data practices, please contact us at:
-  </p>
-  <p>
-    <strong>Email:</strong>
-    <a href="mailto:hakanxcevik7@gmail.com">hakanxcevik7@gmail.com</a>
-  </p>
-  <p>
-    <strong>Website:</strong> [Your Website URL]
-  </p>
-  
+  <div class="contact-section">
+    <p>
+      If you have questions about this Privacy Policy or our data practices, please contact us at:
+    </p>
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:hakanxcevik7@gmail.com">hakanxcevik7@gmail.com</a>
+    </p>
+    <p>
+      <strong>GitHub:</strong>
+      <a href="https://github.com/Cevik10" target="_blank">https://github.com/Cevik10</a>
+    </p>
+  </div>
+
   <h2>12. CONSENT</h2>
   <p>
     By using Wonka Kids, you consent to this Privacy Policy. If you do not agree with this policy, please do not use the app.
   </p>
-  
+
   <h2>13. DATA RETENTION</h2>
   <p>
     We retain data only as long as:
@@ -189,22 +305,21 @@
     <li>You choose to keep the data</li>
     <li>You can delete all data at any time through Settings</li>
   </ul>
-  
+
   <h2>14. INTERNATIONAL USERS</h2>
   <p>
     This app is available internationally. Data is stored locally on your device regardless of your location. We comply with applicable privacy laws in all jurisdictions where the app is available.
   </p>
-  
-  <p>
-    ---
-  </p>
-  <p>
-    Thank you for trusting Wonka Kids with your child's learning journey. We are committed to providing a safe, educational, and fun experience while protecting your privacy.
-  </p>
-  
-  <h2>Legal</h2>
-  <p>
-    &copy; 2025 Wonka Kids. All rights reserved.
-  </p>
+
+  <div class="thank-you">
+    <p>
+      Thank you for trusting Wonka Kids with your child's learning journey. We are committed to providing a safe, educational, and fun experience while protecting your privacy.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Wonka Kids. All rights reserved.</p>
+    <p>Developed with ❤️ by <a href="https://github.com/Cevik10" target="_blank">Cevik10</a></p>
+  </footer>
 </body>
 </html>
